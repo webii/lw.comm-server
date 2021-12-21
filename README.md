@@ -30,3 +30,30 @@ The server supports several interfaces to communicate with machines.
 
 Please check the wiki for details about the API.
 
+## Installation
+
+* Nodejs v12 
+```
+    curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - 
+    apt-get install -y nodejs
+```
+
+* Libraries
+```
+    sudo apt-get install gcc g++ make nodejs git
+```
+
+* Laserweb
+```
+    git clone https://github.com/LaserWeb/lw.comm-server.git
+    cd lw.comm-server
+    sudo npm install serialport --unsafe-perm --build-from-source
+    sudo npm install
+```
+
+## Creating binary on raspberry pi
+```
+    npm install -g pkg
+    sudo apt install python2-dev -y
+    pkg -t node12-linux-arm src/server.js
+```
